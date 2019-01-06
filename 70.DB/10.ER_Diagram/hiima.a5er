@@ -1,0 +1,213 @@
+﻿# A5:ER FORMAT:12
+# A5:ER ENCODING:UTF8
+# A5:ER Mk-1 Copyright (C)2007 m.matsubara
+# A5:SQL Mk-2 Copyright (C)1997 m.matsubara
+#  http://www.wind.sannet.ne.jp/m_matsu/developer/a5m2/
+
+[Manager]
+ProjectName=hiima
+Author=
+MaxEntityRowShow=1000
+ReadOnlyRecommend=0
+Page=Main
+PageInfo="Main",2,"A3Landscape",$FFFFFF
+LogicalView=1
+DecodeDomain=0
+ViewModePageIndividually=1
+ViewMode=2
+ViewFormat=0
+UseNondependenceDashLine=0
+FontName=Consolas
+FontSize=8
+PaperSize=A4Landscape
+HeaderLeft=
+HeaderCenter=
+HeaderRight=
+FooterLeft=
+FooterCenter=
+FooterRight=
+ShowPageoutRelation=1
+RDBMSType=5
+RDBMSTypeName=MySQL
+GenerateDropTableStatement=1
+DropTableIfExists=0
+ForceQuoteIdentifier=1
+DefaultPkName=%0:s_PKC
+DefaultPkIndexName=%0:s_PKI
+DefaultIndexName=%0:s_IX%1:d
+DefaultFkName=%0:s_FK%1:d
+SqlSeparator=0
+ShowTag=1
+ShowCommonAttributes=0
+
+[Relation]
+Entity1=TALK_THEME
+Entity2=COMMENT
+RelationType1=2
+RelationType2=3
+Fields1=TALK_THEME_ID
+Fields2=TALK_THEME_ID
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,4189,5811,4239,R,R
+Dependence=0
+Caption=
+PName=
+LineMode=0
+Bar1=419
+Bar2=581
+Bar3=424
+TermPos1=R
+TermPos2=R
+
+[Relation]
+Entity1=TALK_THEME
+Entity2=TAG
+RelationType1=2
+RelationType2=3
+Fields1=TALK_THEME_ID
+Fields2=TALK_THEME_ID
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,8491,1509,5612,R,R
+Dependence=0
+Caption=
+PName=
+LineMode=0
+Bar1=849
+Bar2=151
+Bar3=561
+TermPos1=R
+TermPos2=R
+
+[Relation]
+Entity1=CUSTOMER
+Entity2=COMMENT
+RelationType1=2
+RelationType2=3
+Fields1=USER_ID
+Fields2=USER_ID
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,4081,5919,1144,R,R
+Dependence=0
+Caption=
+PName=
+LineMode=0
+Bar1=408
+Bar2=592
+Bar3=114
+TermPos1=R
+TermPos2=R
+
+[Relation]
+Entity1=CUSTOMER
+Entity2=TALK_THEME
+RelationType1=2
+RelationType2=3
+Fields1=USER_ID
+Fields2=USER_ID
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,5622,4378,5030,R,R
+Dependence=0
+Caption=
+PName=
+LineMode=0
+Bar1=562
+Bar2=438
+Bar3=503
+TermPos1=R
+TermPos2=R
+
+[Entity]
+PName=TAG
+LName=TAG
+Comment=
+TableOption=
+Page=Main
+Left=1050
+Top=650
+Field="TAG_ID","TAG_ID","@DECIMAL(8)","NOT NULL",0,"","",$FFFFFFFF,""
+Field="TAG_NAME","TAG_NAME","@VARCHAR(50)","NOT NULL",,"","",$FFFFFFFF,""
+Field="USER_ID","USER_ID","@DECIMAL(8)","NOT NULL",,"","",$FFFFFFFF,""
+Field="TALK_THEME_ID","TALK_THEME_ID","@DECIMAL(8)","NOT NULL",,"","",$FFFFFFFF,""
+Field="CREATE_DATETIME","CREATE_DATETIME","DATETIME","NOT NULL",,"","",$FFFFFFFF,""
+Field="DELETE_DATETIME","DELETE_DATETIME","DATETIME",,,"","",$FFFFFFFF,""
+Field="USED_COUNT","USED_COUNT","@DECIMAL(8)","NOT NULL",,"","",$FFFFFFFF,""
+Field="LAST_USED_DATETIME","LAST_USED_DATETIME","DATETIME","NOT NULL",,"","",$FFFFFFFF,""
+Field="IS_DELETED","IS_DELETED","BOOLEAN","NOT NULL",,"","",$FFFFFFFF,""
+Field="INPUT_DATE","INPUT_DATE","DATETIMW","NOT NULL",,"","",$FFFFFFFF,""
+Field="UPDATE_DATIME","UPDATE_DATE","DATEIME","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20190106135244
+Position="Main",1050,650
+
+[Entity]
+PName=COMMENT
+LName=COMMENT
+Comment=
+TableOption=
+Page=Main
+Left=350
+Top=1000
+Field="COMMENT_ID","COMMENT_ID","@DECIMAL(8)","NOT NULL",0,"","",$FFFFFFFF,""
+Field="COMMENT_NAME","COMMENT_NAME","@VARCHAR(50)","NOT NULL",,"","",$FFFFFFFF,""
+Field="USER_ID","USER_ID","@DECIMAL(8)","NOT NULL",,"","",$FFFFFFFF,""
+Field="TALK_THEME_ID","TALK_THEME_ID","@DECIMAL(8)","NOT NULL",,"","",$FFFFFFFF,""
+Field="CREATE_DATETIME","CREATE_DATETIME","DATETIME","NOT NULL",,"","",$FFFFFFFF,""
+Field="DELETE_DATETIME","DELETE_DATETIME","DATETIME",,,"","",$FFFFFFFF,""
+Field="IS_DELETED","IS_DELETED","BOOLEAN","NOT NULL",,"","",$FFFFFFFF,""
+Field="INPUT_DATE","INPUT_DATE","DATETIMW","NOT NULL",,"","",$FFFFFFFF,""
+Field="UPDATE_DATIME","UPDATE_DATE","DATEIME","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20190106135237
+Position="Main",350,1000
+
+[Entity]
+PName=TALK_THEME
+LName=TALK_THEME
+Comment=
+TableOption=
+Page=Main
+Left=600
+Top=600
+Field="TALK_THEME_ID","TALK_THEME_ID","@DECIMAL(8)","NOT NULL",0,"","",$FFFFFFFF,""
+Field="TALK_THEME_NAME","TALK_THEME_NAME","@VARCHAR(50)","NOT NULL",,"","",$FFFFFFFF,""
+Field="USER_ID","USER_ID","@DECIMAL(8)","NOT NULL",,"","",$FFFFFFFF,""
+Field="CREATE_DATETIME","CREATE_DATETIME","DATETIME","NOT NULL",,"","",$FFFFFFFF,""
+Field="DELETE_DATETIME","DELETE_DATETIME","DATETIME",,,"","",$FFFFFFFF,""
+Field="IS_DELETED","IS_DELETED","BOOLEAN","NOT NULL",,"","",$FFFFFFFF,""
+Field="INPUT_DATE","INPUT_DATE","DATETIMW","NOT NULL",,"","",$FFFFFFFF,""
+Field="UPDATE_DATIME","UPDATE_DATE","DATEIME","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20190106135216
+Position="Main",600,600
+
+[Entity]
+PName=CUSTOMER
+LName=CUSTOMER
+Comment=
+TableOption=
+Page=Main
+Left=50
+Top=550
+Field="USER_ID","USER_ID","@DECIMAL(8)","NOT NULL",0,"","",$FFFFFFFF,""
+Field="USER_NAME","USER_NAME","@VARCHAR(50)","NOT NULL",,"","",$FFFFFFFF,""
+Field="ICON_PATH","ICON_PATH","@VARCHAR(100)","NOT NULL",,"","",$FFFFFFFF,""
+Field="CREATE_DATETIME","CREATE_DATETIME","DATETIME","NOT NULL",,"","",$FFFFFFFF,""
+Field="DELETE_DATETIME","DELETE_DATETIME","DATETIME",,,"","",$FFFFFFFF,""
+Field="IS_DELETED","IS_DELETED","BOOLEAN","NOT NULL",,"","",$FFFFFFFF,""
+Field="INPUT_DATE","INPUT_DATE","DATETIME","NOT NULL",,"","",$FFFFFFFF,""
+Field="UPDATE_DATE","UPDATE_DATE","DATETIME","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20190106134338
+Position="Main",50,550,365,294
