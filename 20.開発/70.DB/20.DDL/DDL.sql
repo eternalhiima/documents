@@ -1,107 +1,106 @@
 -- Project Name : hiima
--- Date/Time    : 2019/02/11 15:24:38
+-- Date/Time    : 2019/02/20 22:42:46
 -- Author       : rebor
 -- RDBMS Type   : MySQL
 -- Application  : A5:SQL Mk-2
 
--- ƒJƒeƒSƒŠ
+-- ã‚«ãƒ†ã‚´ãƒª
 drop table `CATEGORY` cascade;
 
 create table `CATEGORY` (
-  `CATEGORY_ID` DECIMAL(13,0) not null comment 'ƒJƒeƒSƒŠID'
-  , `CATEGORY_NAME` VARCHAR(12) not null comment 'ƒJƒeƒSƒŠ–¼'
-  , `USER_ID` DECIMAL(13,0) not null comment 'ƒ†[ƒU[ID'
-  , `CREATE_DATETIME` DATETIME not null comment 'ì¬“ú'
-  , `USED_COUNT` DECIMAL(13,0) not null comment 'g—p‰ñ”'
-  , `LAST_USED_DATETIME` DATETIME not null comment 'ÅIg—p“ú'
-  , `INPUT_DATETIME` DATETIME not null comment '“ü—Í“ú'
-  , `UPDATE_DATETIME` DATETIME not null comment 'XV“ú'
-  , constraint `CATEGORY_PKC` primary key (`CATEGORY_ID`)
-) comment 'ƒJƒeƒSƒŠ' ;
+  `ID` BIGINT not null auto_increment comment 'ã‚«ãƒ†ã‚´ãƒªID'
+  , `CATEGORY_NAME` VARCHAR(12) not null comment 'ã‚«ãƒ†ã‚´ãƒªå'
+  , `USER_ID` DECIMAL(13,0) not null comment 'ãƒ¦ãƒ¼ã‚¶ãƒ¼ID'
+  , `CREATE_DATETIME` DATETIME not null comment 'ä½œæˆæ—¥æ™‚'
+  , `USED_COUNT` DECIMAL(13,0) not null comment 'ä½¿ç”¨å›æ•°'
+  , `LAST_USED_DATETIME` DATETIME not null comment 'æœ€çµ‚ä½¿ç”¨æ—¥æ™‚'
+  , `INPUT_DATETIME` DATETIME not null comment 'å…¥åŠ›æ—¥æ™‚'
+  , `UPDATE_DATETIME` DATETIME not null comment 'æ›´æ–°æ—¥æ™‚'
+  , constraint `CATEGORY_PKC` primary key (`ID`)
+) comment 'ã‚«ãƒ†ã‚´ãƒª' ;
 
--- ƒg[ƒN•]‰¿
+-- ãƒˆãƒ¼ã‚¯è©•ä¾¡
 drop table `TALK_EVALUATION` cascade;
 
 create table `TALK_EVALUATION` (
-  `TALK_EVALUATION_ID` DECIMAL(13,0) not null comment 'ƒg[ƒN•]‰¿ID'
-  , `USER_ID` DECIMAL(13,0) comment 'ƒ†[ƒU[ID'
-  , `TALK_THEME_ID` DECIMAL(13,0) not null comment 'ƒg[ƒNƒe[ƒ}ID'
-  , `EVALUATION` DECIMAL(2,0) not null comment '•]‰¿'
-  , `INPUT_DATETIME` DATETIME not null comment '“ü—Í“ú'
-  , `UPDATE_DATETIME` DATETIME not null comment 'XV“ú'
-  , constraint `TALK_EVALUATION_PKC` primary key (`TALK_EVALUATION_ID`)
-) comment 'ƒg[ƒN•]‰¿' ;
+  `ID` BIGINT not null auto_increment comment 'ãƒˆãƒ¼ã‚¯è©•ä¾¡ID'
+  , `USER_ID` DECIMAL(13,0) comment 'ãƒ¦ãƒ¼ã‚¶ãƒ¼ID'
+  , `TALK_THEME_ID` DECIMAL(13,0) not null comment 'ãƒˆãƒ¼ã‚¯ãƒ†ãƒ¼ãƒID'
+  , `EVALUATION` DECIMAL(2,0) not null comment 'è©•ä¾¡'
+  , `INPUT_DATETIME` DATETIME not null comment 'å…¥åŠ›æ—¥æ™‚'
+  , `UPDATE_DATETIME` DATETIME not null comment 'æ›´æ–°æ—¥æ™‚'
+  , constraint `TALK_EVALUATION_PKC` primary key (`ID`)
+) comment 'ãƒˆãƒ¼ã‚¯è©•ä¾¡' ;
 
--- ƒg[ƒN—š—ğ
+-- ãƒˆãƒ¼ã‚¯å±¥æ­´
 drop table `TALK_HISTORY` cascade;
 
 create table `TALK_HISTORY` (
-  `TALK_HISTORY_ID` DECIMAL(13,0) not null comment 'ƒg[ƒN—š—ğID'
-  , `TALK_THEME_ID` DECIMAL(13,0) not null comment 'ƒg[ƒNƒe[ƒ}ID'
-  , `USER_ID` DECIMAL(13,0) comment 'ƒ†[ƒU[ID'
-  , `START_DATETIME` DATETIME not null comment 'ŠJn'
-  , `END_DATETIME` DATETIME not null comment 'I—¹'
-  , `INPUT_DATETIME` DATETIME not null comment '“ü—Í“ú'
-  , `UPDATE_DATETIME` DATETIME not null comment 'XV“ú'
-  , constraint `TALK_HISTORY_PKC` primary key (`TALK_HISTORY_ID`)
-) comment 'ƒg[ƒN—š—ğ' ;
+  `ID` BIGINT not null auto_increment comment 'ãƒˆãƒ¼ã‚¯å±¥æ­´ID'
+  , `TALK_THEME_ID` DECIMAL(13,0) not null comment 'ãƒˆãƒ¼ã‚¯ãƒ†ãƒ¼ãƒID'
+  , `USER_ID` DECIMAL(13,0) comment 'ãƒ¦ãƒ¼ã‚¶ãƒ¼ID'
+  , `START_DATETIME` DATETIME not null comment 'é–‹å§‹æ™‚åˆ»'
+  , `END_DATETIME` DATETIME not null comment 'çµ‚äº†æ™‚åˆ»'
+  , `INPUT_DATETIME` DATETIME not null comment 'å…¥åŠ›æ—¥æ™‚'
+  , `UPDATE_DATETIME` DATETIME not null comment 'æ›´æ–°æ—¥æ™‚'
+  , constraint `TALK_HISTORY_PKC` primary key (`ID`)
+) comment 'ãƒˆãƒ¼ã‚¯å±¥æ­´' ;
 
--- ƒg[ƒNƒe[ƒ}ƒJƒeƒSƒŠƒoƒCƒ“ƒh
+-- ãƒˆãƒ¼ã‚¯ãƒ†ãƒ¼ãƒã‚«ãƒ†ã‚´ãƒªãƒã‚¤ãƒ³ãƒ‰
 drop table `TALK_THEME_CATEGORY_BIND` cascade;
 
 create table `TALK_THEME_CATEGORY_BIND` (
-  `TALK_THEME_CATEGORY_BIND_ID` DECIMAL(13,0) not null comment 'ƒg[ƒNƒe[ƒ}ƒJƒeƒSƒŠƒoƒCƒ“ƒhID'
-  , `TALK_THEME_ID` DECIMAL(13,0) not null comment 'ƒg[ƒNƒe[ƒ}ID'
-  , `CATEGORY_ID` DECIMAL(13,0) not null comment 'ƒJƒeƒSƒŠID'
-  , `USER_ID` DECIMAL(13,0) not null comment 'ƒ†[ƒU[ID'
-  , `INPUT_DATETIME` DATETIME not null comment '“ü—Í“ú'
-  , `UPDATE_DATETIME` DATETIME not null comment 'XV“ú'
-  , constraint `TALK_THEME_CATEGORY_BIND_PKC` primary key (`TALK_THEME_CATEGORY_BIND_ID`)
-) comment 'ƒg[ƒNƒe[ƒ}ƒJƒeƒSƒŠƒoƒCƒ“ƒh' ;
+  `ID` BIGINT not null auto_increment comment 'ãƒˆãƒ¼ã‚¯ãƒ†ãƒ¼ãƒã‚«ãƒ†ã‚´ãƒªãƒã‚¤ãƒ³ãƒ‰ID'
+  , `TALK_THEME_ID` DECIMAL(13,0) not null comment 'ãƒˆãƒ¼ã‚¯ãƒ†ãƒ¼ãƒID'
+  , `CATEGORY_ID` DECIMAL(13,0) not null comment 'ã‚«ãƒ†ã‚´ãƒªID'
+  , `USER_ID` DECIMAL(13,0) not null comment 'ãƒ¦ãƒ¼ã‚¶ãƒ¼ID'
+  , `INPUT_DATETIME` DATETIME not null comment 'å…¥åŠ›æ—¥æ™‚'
+  , `UPDATE_DATETIME` DATETIME not null comment 'æ›´æ–°æ—¥æ™‚'
+  , constraint `TALK_THEME_CATEGORY_BIND_PKC` primary key (`ID`)
+) comment 'ãƒˆãƒ¼ã‚¯ãƒ†ãƒ¼ãƒã‚«ãƒ†ã‚´ãƒªãƒã‚¤ãƒ³ãƒ‰' ;
 
--- ƒRƒƒ“ƒg
+-- ã‚³ãƒ¡ãƒ³ãƒˆ
 drop table `COMMENT` cascade;
 
 create table `COMMENT` (
-  `COMMENT_ID` DECIMAL(13,0) not null comment 'ƒRƒƒ“ƒgID'
-  , `TALK_THEME_ID` DECIMAL(13,0) not null comment 'ƒg[ƒNƒe[ƒ}ID'
-  , `COMMENT` VARCHAR(50) not null comment 'ƒRƒƒ“ƒg'
-  , `USER_ID` DECIMAL(13,0) not null comment 'ƒ†[ƒU[ID'
-  , `CREATE_DATETIME` DATETIME not null comment 'ì¬“ú'
-  , `INPUT_DATETIME` DATETIME not null comment '“ü—Í“ú'
-  , `UPDATE_DATETIME` DATETIME not null comment 'XV“ú'
-  , constraint `COMMENT_PKC` primary key (`COMMENT_ID`)
-) comment 'ƒRƒƒ“ƒg' ;
+  `ID` BIGINT not null auto_increment comment 'ã‚³ãƒ¡ãƒ³ãƒˆID'
+  , `TALK_THEME_ID` DECIMAL(13,0) not null comment 'ãƒˆãƒ¼ã‚¯ãƒ†ãƒ¼ãƒID'
+  , `COMMENT` VARCHAR(50) not null comment 'ã‚³ãƒ¡ãƒ³ãƒˆ'
+  , `USER_ID` DECIMAL(13,0) not null comment 'ãƒ¦ãƒ¼ã‚¶ãƒ¼ID'
+  , `CREATE_DATETIME` DATETIME not null comment 'ä½œæˆæ—¥æ™‚'
+  , `INPUT_DATETIME` DATETIME not null comment 'å…¥åŠ›æ—¥æ™‚'
+  , `UPDATE_DATETIME` DATETIME not null comment 'æ›´æ–°æ—¥æ™‚'
+  , constraint `COMMENT_PKC` primary key (`ID`)
+) comment 'ã‚³ãƒ¡ãƒ³ãƒˆ' ;
 
--- ƒg[ƒNƒe[ƒ}
+-- ãƒˆãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ
 drop table `TALK_THEME` cascade;
 
 create table `TALK_THEME` (
-  `TALK_THEME_ID` DECIMAL(13,0) not null comment 'ƒg[ƒNƒe[ƒ}ID'
-  , `TITLE` VARCHAR(30) not null comment 'ƒ^ƒCƒgƒ‹'
-  , `CONTENT` VARCHAR(500) not null comment '“à—e'
-  , `THUMBNAIL_PATH` VARCHAR(2100) comment 'ƒTƒ€ƒlƒCƒ‹ƒpƒX'
-  , `RELATED_URL` VARCHAR(2100) comment 'ŠÖ˜AURL'
-  , `GOOD_COUNT` DECIMAL(13,0) default 0 not null comment '‚•]‰¿”'
-  , `BAD_COUNT` DECIMAL(13,0) default 0 not null comment '’á•]‰¿”'
-  , `TALK_COUNT` DECIMAL(13,0) default 0 not null comment 'ƒg[ƒN”'
-  , `USER_ID` DECIMAL(13,0) not null comment 'ƒ†[ƒU[ID'
-  , `CREATE_DATETIME` DATETIME not null comment 'ì¬“ú'
-  , `INPUT_DATETIME` DATETIME not null comment '“ü—Í“ú'
-  , `UPDATE_DATETIME` DATETIME not null comment 'XV“ú'
-  , constraint `TALK_THEME_PKC` primary key (`TALK_THEME_ID`)
-) comment 'ƒg[ƒNƒe[ƒ}' ;
+  `ID` BIGINT not null auto_increment comment 'ãƒˆãƒ¼ã‚¯ãƒ†ãƒ¼ãƒID'
+  , `TITLE` VARCHAR(30) not null comment 'ã‚¿ã‚¤ãƒˆãƒ«'
+  , `CONTENT` VARCHAR(500) not null comment 'å†…å®¹'
+  , `THUMBNAIL_PATH` VARCHAR(2100) comment 'ã‚µãƒ ãƒã‚¤ãƒ«ãƒ‘ã‚¹'
+  , `RELATED_URL` VARCHAR(2100) comment 'é–¢é€£URL'
+  , `GOOD_COUNT` DECIMAL(13,0) default 0 not null comment 'é«˜è©•ä¾¡æ•°'
+  , `BAD_COUNT` DECIMAL(13,0) default 0 not null comment 'ä½è©•ä¾¡æ•°'
+  , `TALK_COUNT` DECIMAL(13,0) default 0 not null comment 'ãƒˆãƒ¼ã‚¯æ•°'
+  , `USER_ID` DECIMAL(13,0) not null comment 'ãƒ¦ãƒ¼ã‚¶ãƒ¼ID'
+  , `CREATE_DATETIME` DATETIME not null comment 'ä½œæˆæ—¥æ™‚'
+  , `INPUT_DATETIME` DATETIME not null comment 'å…¥åŠ›æ—¥æ™‚'
+  , `UPDATE_DATETIME` DATETIME not null comment 'æ›´æ–°æ—¥æ™‚'
+  , constraint `TALK_THEME_PKC` primary key (`ID`)
+) comment 'ãƒˆãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ' ;
 
--- ƒ†[ƒU[
+-- ãƒ¦ãƒ¼ã‚¶ãƒ¼
 drop table `USER` cascade;
 
 create table `USER` (
-  `USER_ID` DECIMAL(13,0) not null comment 'ƒ†[ƒU[ID'
-  , `USER_NAME` VARCHAR(10) not null comment 'ƒ†[ƒU[–¼'
-  , `ICON_PATH` VARCHAR(100) comment 'ƒAƒCƒRƒ“ƒpƒX'
-  , `CREATE_DATETIME` DATETIME not null comment 'ì¬“ú'
-  , `INPUT_DATETIME` DATETIME not null comment '“ü—Í“ú'
-  , `UPDATE_DATETIME` DATETIME not null comment 'XV“ú'
-  , constraint `USER_PKC` primary key (`USER_ID`)
-) comment 'ƒ†[ƒU[' ;
-
+  `ID` BIGINT not null auto_increment comment 'ãƒ¦ãƒ¼ã‚¶ãƒ¼ID'
+  , `USER_NAME` VARCHAR(10) not null comment 'ãƒ¦ãƒ¼ã‚¶ãƒ¼å'
+  , `ICON_PATH` VARCHAR(100) comment 'ã‚¢ã‚¤ã‚³ãƒ³ãƒ‘ã‚¹'
+  , `CREATE_DATETIME` DATETIME not null comment 'ä½œæˆæ—¥æ™‚'
+  , `INPUT_DATETIME` DATETIME not null comment 'å…¥åŠ›æ—¥æ™‚'
+  , `UPDATE_DATETIME` DATETIME not null comment 'æ›´æ–°æ—¥æ™‚'
+  , constraint `USER_PKC` primary key (`ID`)
+) comment 'ãƒ¦ãƒ¼ã‚¶ãƒ¼' ;
