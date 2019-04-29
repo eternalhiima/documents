@@ -45,27 +45,6 @@ ShowTag=1
 ShowCommonAttributes=1
 
 [Relation]
-Entity1=USER
-Entity2=CATEGORY
-RelationType1=2
-RelationType2=3
-Fields1=ID
-Fields2=USER_ID
-Cardinarity1=
-Cardinarity2=
-Position="MAIN",0,3585,8479,3047,R,R
-Dependence=0
-Caption=
-PName=
-ModifiedDateTime=20190211142343
-LineMode=0
-Bar1=358
-Bar2=848
-Bar3=305
-TermPos1=R
-TermPos2=R
-
-[Relation]
 Entity1=CATEGORY
 Entity2=TALK_THEME_CATEGORY_BIND
 RelationType1=2
@@ -74,14 +53,14 @@ Fields1=ID
 Fields2=CATEGORY_ID
 Cardinarity1=
 Cardinarity2=
-Position="MAIN",0,4621,3997,4835,R,R
+Position="MAIN",0,4621,3997,4571,R,R
 Dependence=0
 Caption=
 PName=
 LineMode=0
 Bar1=462
 Bar2=400
-Bar3=484
+Bar3=457
 TermPos1=R
 TermPos2=R
 
@@ -95,14 +74,13 @@ Left=2600
 Top=300
 Field="カテゴリID","ID","BIGINT","NOT NULL",0,"","",$FFFFFFFF,""
 Field="カテゴリ名","CATEGORY_NAME","@VARCHAR(12)","NOT NULL",,"","",$FFFFFFFF,""
-Field="ユーザーID","USER_ID","BIGINT","NOT NULL",,"","",$FFFFFFFF,""
 Field="作成日時","CREATE_DATETIME","DATETIME","NOT NULL",,"","",$FFFFFFFF,""
 Field="使用回数","USED_COUNT","@DECIMAL(13,0)","NOT NULL",,"","",$FFFFFFFF,""
 Field="最終使用日時","LAST_USED_DATETIME","DATETIME","NOT NULL",,"","",$FFFFFFFF,""
 EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
-ModifiedDateTime=20190309234805
+ModifiedDateTime=20190322234602
 Position="MAIN",2600,300
 
 [Relation]
@@ -251,14 +229,14 @@ Fields1=ID
 Fields2=TALK_THEME_ID
 Cardinarity1=
 Cardinarity2=
-Position="MAIN",0,6146,1509,4910,R,R
+Position="MAIN",0,5400,1509,5127,R,R
 Dependence=0
 Caption=
 PName=
 LineMode=0
-Bar1=615
+Bar1=540
 Bar2=151
-Bar3=491
+Bar3=513
 TermPos1=R
 TermPos2=R
 
@@ -308,17 +286,15 @@ LName=トークテーマカテゴリバインド
 Comment=
 TableOption=
 Page=MAIN
-Left=2550
+Left=2650
 Top=1100
-Field="トークテーマカテゴリバインドID","ID","BIGINT","NOT NULL",0,"","",$FFFFFFFF,""
 Field="トークテーマID","TALK_THEME_ID","BIGINT","NOT NULL",,"","",$FFFFFFFF,""
 Field="カテゴリID","CATEGORY_ID","BIGINT","NOT NULL",,"","",$FFFFFFFF,""
-Field="ユーザーID","USER_ID","BIGINT","NOT NULL",,"","",$FFFFFFFF,""
 EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
-ModifiedDateTime=20190309234744
-Position="MAIN",2550,1100
+ModifiedDateTime=20190321170702
+Position="MAIN",2650,1100
 
 [Entity]
 PName=COMMENT
