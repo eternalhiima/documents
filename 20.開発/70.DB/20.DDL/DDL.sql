@@ -61,7 +61,7 @@ drop table `COMMENT` cascade;
 create table `COMMENT` (
   `ID` BIGINT not null auto_increment comment 'コメントID'
   , `TALK_THEME_ID` BIGINT not null comment 'トークテーマID'
-  , `COMMENT` VARCHAR(50) not null comment 'コメント'
+  , `COMMENT` VARCHAR(50) comment 'コメント'
   , `USER_ID` BIGINT not null comment 'ユーザーID'
   , `CREATE_DATETIME` DATETIME not null comment '作成日時'
   , `INPUT_DATETIME` DATETIME not null comment '入力日時'

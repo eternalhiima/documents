@@ -307,12 +307,12 @@ Top=1500
 Field="コメントID","ID","BIGINT","NOT NULL",0,"","",$FFFFFFFF,""
 Field="トークテーマID","TALK_THEME_ID","BIGINT","NOT NULL",,"","",$FFFFFFFF,""
 Field="コメント","COMMENT","@VARCHAR(50)","NOT NULL",,"","",$FFFFFFFF,""
-Field="ユーザーID","USER_ID","BIGINT","NOT NULL",,"","",$FFFFFFFF,""
+Field="ユーザーID","USER_ID","BIGINT",,,"","",$FFFFFFFF,""
 Field="作成日時","CREATE_DATETIME","DATETIME","NOT NULL",,"","",$FFFFFFFF,""
 EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
-ModifiedDateTime=20190309234650
+ModifiedDateTime=20190506010125
 Position="MAIN",150,1500
 
 [Entity]
