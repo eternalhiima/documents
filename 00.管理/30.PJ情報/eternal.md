@@ -3,3 +3,6 @@
 - mail:eternal.hiima@gmail.com
 - PW:folicarnia0407
 - [Gitリポジトリ](https://github.com/eternalhiima/eternal.git)
+
+### AWSアカウント
+- PW: foli_carnia0407
